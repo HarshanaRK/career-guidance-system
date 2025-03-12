@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .form-group select:focus {
+            border-color: #007bff;
+        }
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #4A90E2, #883fc8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Rate Your Skills</h2>
+    <% if (success) { %>
+        <div class="success-message">Form submitted successfully!</div>
+    <% } %>
+    <form action="/career_form" method="POST">
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Database Fundamentals</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Database" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Software Development</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Development" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Computer Architecture</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Computer_Architecture" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Distributed Computing Systems</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Distributed_Computing_Systems" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Cyber Security</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Cyber_Security" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Computer Networking</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Networking" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Programming Skills</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Programming_Skills" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Project Management</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Project_Management" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Computer Forensics Fundamentals</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Computer_Forensics_Fundamentals" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Technical Communication Skills</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Technical_Communication" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">AI ML</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_AI_ML" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Software Engineering</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Software_Engineering" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Business Analysis</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Business_Analysis" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Communication Skills</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Communication_Skills" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Data Science</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Data_Science" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Troubleshooting Skills</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Troubleshooting_Skills" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Graphics Designing</label>
+            <div class="col-sm-9">
+                <select class="form-control" name="rate_Graphics_Designing" required>
+                    <option value="">Choose option</option>
+                    <option value="1">Not Interested</option>
+                    <option value="2">Poor</option>
+                    <option value="3">Beginner</option>
+                    <option value="5">Average</option>
+                    <option value="6">Intermediate</option>
+                    <option value="7">Excellent</option>
+                    <option value="9">Professional</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>

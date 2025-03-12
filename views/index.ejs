@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/bg1.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+        
+        .nav-links {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(149, 73, 247, 0.2);
+            border-radius: 5px;
+        }
+        
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            padding: 50px;
+        }
+        .content {
+            max-width: 600px;
+            text-align: 600;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-decoration: solid;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-decoration: solid ;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff3b77;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #ff1e5a;
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 100px; /* Adjusted for better alignment */
+            padding: 10px 15px;
+            background: linear-gradient(90deg, #4A90E2, #883fc8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .logout-button:hover {
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Career Guidance</div>
+        <div class="nav-links">
+            <a href="/">HOME</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT  US</a>
+        </div>
+        <a href="/logout" class="logout-button">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <div class="=content">
+        <h1> Career Guidance System</h1>
+        <p>Discover yourself<br>Take the test to find the perfect role for you after Engineering</p>
+        <a href="/career_form" class="btn">Get Started!</a>
+        </div>
+    </div>
+    
+</body>
+</html>

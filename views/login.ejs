@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-image: url('/bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding-left: 160px;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+            min-height: 350px;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 97%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border 0.3s;
+        }
+        .login-container input:focus {
+            border: 1px solid #007bff;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, #4A90E2, #883fc8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .login-container button:hover {
+            opacity: 0.9;
+        }
+        .login-container p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .login-container p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-container p a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Sign in</h1>
+        <div class="error-message">
+        <% if (error === 'invalid') { %>
+            <p>Invalid credentials! Please try again.</p>
+        <% } else if (message) { %>
+            <p><%= message %></p>
+        <% } %>   
+        </div>   
+
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign in</button>
+        </form>
+        <p>Don't have an account? <a href="/register">Sign up</a></p>
+    </div>
+</body>
+</html>
